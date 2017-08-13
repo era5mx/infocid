@@ -1,0 +1,13 @@
+Preparando la conexión con su Base de Datos PostgreSQL:
+--- 
+
+Escriba los datos necesarios 
+
+host=[Nombre_del_Servidor]
+port=[Puerto]
+databasename=[Base_de_Datos]
+username=[Usuario]
+password=[Contraseña]
+
+...en los archivos connection.php y connection1.php
+

@@ -1,0 +1,20 @@
+INFOCID - Instalación
+
+  - Copie la carpeta con el código en /var/www/html/
+  - Ingrese al phpPgAdmin
+  - Con phpPgAdmin crear las bases de datos: Biblio e Inventario
+  - Cree las tablas con los scripts csv incluídos en el código.
+    Ingrese a la base de datos Biblio; use la opción de localizacion de archivo,
+    ubique el archivo ScriptBDBilio.csv, seleccione y luego oprima el boton "go".
+    Siga el mismo procedimiento para ScriptBDInventario.csv.
+  - Ingrese a <www.tu-host.com>/<tu-directorio-de-instalacion>
+
+
+  De la instalación:
+  + Una vez instalado el sistema vaya a Procesos y empiece a ingresar los datos que
+    considere conveniente.
+    Se recomienda:
+  + Validación de usuarios: software Webmin
+  + Ingreso de textos: separadores "/"
+  + Campos que no tienen texto, emplear "-"
+  + Para mostrar imagenes de textos escanearlos y guardarlos en la carpeta /consulta/images

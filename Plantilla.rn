@@ -1,0 +1,320 @@
+<?php
+/**
+* @Infocid version 2.0  feb-2005
+* @Copyright (C) 2005 SPHERA5, C.A. <sphera5@gmail.com>
+**
+* @Obra basada en el Programa Infocid
+* @Copyright (C) 2003 CIDTEL <cidtel@inictel.gob.pe>
+* @license http://www.gnu.org/copyleft/gpl.html GNU/GPL
+*/
+
+
+	
+function tablaNautor() { ?>
+
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0>
+	<COL WIDTH=135*>
+        <COL WIDTH=121*>
+        <THEAD>
+              <TR VALIGN=BOTTOM>
+                   <TD WIDTH=53% HEIGHT=33>
+                        <P ALIGN=RIGHT valign=bottom><B><FONT SIZE=2 FACE="Nimbus Sans L">NOMBRE
+                             DEL AUTOR: </FONT></B>
+                                 </P>
+                           </TD>
+                      <TD WIDTH=50%>
+                       <!--  <DIV ALIGN=CENTER> -->
+                                <INPUT TYPE=TEXT NAME="nom" SIZE=20>
+                                         &nbsp<INPUT TYPE=SUBMIT VALUE="Buscar"> 
+                                </TD>
+                        </TR>
+                </THEAD>
+        </TABLE>
+
+<? } 
+
+
+ function Logo() { ?>
+
+<IMG SRC="../images/logoBiblio.gif" WIDTH="300" HEIGHT="60">
+<BR>
+<HR NOSHADE COLOR="#0058B0" SIZE="3">
+
+<? } 
+
+ function Logo2() { ?>
+
+<IMG SRC="../../images/logoBiblio.gif" WIDTH="300" HEIGHT="60">
+<BR>
+<HR NOSHADE COLOR="#0058B0" SIZE="3">
+
+<? } 
+ 
+function pie() { include('includes/head.php');?>
+
+<BR><BR><BR><BR>
+<HR NOSHADE COLOR="#0058B0" SIZE="3" align=center>
+<font face='MS Sans Serif' size=1 align=center><B>© 
+<?php echo "<A HREF=\"mailto: $mailto\">"; ?><?php echo "$copy"; ?></a> Todos los derechos
+reservados - Este sistema es software libre publicado bajo la licencia <a
+href=../GPLes.htm>GNU/GPL</A></B></font><BR><BR>
+
+<? } 
+
+function tablaNdescriptor() { ?>
+
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0>
+                <COL WIDTH=136*>
+                <COL WIDTH=120*>
+                <THEAD>
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33 COLSPAN=2>
+                                        <P ALIGN=CENTER><B><FONT SIZE=2 FACE="Nimbus Sans L">Si no tiene carné digite 
+					"INVITADO"</FONT></B></P>
+                                </TD>
+                        </TR>
+
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33>
+                                        <P ALIGN=RIGHT><B><FONT SIZE=2 FACE="Nimbus Sans L">CARNÉ</FONT></B>
+                                        </P>
+                                </TD>
+                                <TD WIDTH=47% HEIGHT=33>
+                                        <DIV ALIGN=LEFT>
+                                                <INPUT TYPE=TEXT NAME="carne" SIZE=20>
+                                        </DIV>
+                                </TD>
+                        </TR>
+
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33>
+                                        <P ALIGN=RIGHT><B><FONT SIZE=2><FONT FACE="Nimbus Sans L">INGRESE EL TEMA</FONT></FONT></B>
+                                        </P>
+                                </TD>
+                                <TD WIDTH=47% HEIGHT=33>
+                                        <DIV ALIGN=LEFT>
+                                                <P><INPUT TYPE=TEXT NAME="nom" SIZE=20>
+                                                </P>
+                                        </DIV>
+                                </TD>
+                        </TR>
+                </THEAD>
+                <TBODY>
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=24>
+                                        <DIV ALIGN=RIGHT>
+                                                <P><INPUT TYPE=SUBMIT VALUE="Buscar"></P>
+                                        </DIV>
+                                </TD>
+                                <TD WIDTH=47%>
+                                        <P><BR>
+                                        </P>
+                                </TD>
+                        </TR>
+                </TBODY>
+        </TABLE>
+
+<? }
+
+function tablaNconjunta() { ?>
+
+<TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0>
+        <COL WIDTH=135*>
+        <COL WIDTH=121*>
+
+                 <TR VALIGN=BOTTOM>
+                        <TD COLSPAN=4>
+                        <P ALIGN=CENTER><B><FONT SIZE=2 FACE="Nimbus Sans L">Si no tiene carné digite "INVITADO"</FONT></B>
+                        </P>
+                        </TD>
+                 </TR>
+
+                 <TR VALIGN=BOTTOM>
+                        <TD ALIGN=RIGHT><BR></TD>
+                        <TH>
+                                        <B><FONT SIZE=2 FACE="Nimbus Sans L">CARNÉ</FONT></B>
+                        </TH>
+                        <TD>
+                                       <DIV ALIGN=LEFT>
+                                                <INPUT TYPE=TEXT NAME="carne" SIZE=20>
+                                        </DIV>
+                        </TD>
+                        <TD ALIGN=RIGHT><BR></TD>
+                 </TR>
+
+                <TR VALIGN=CENTER>
+                        <TD WIDTH=40% ALIGN=RIGHT><BR></TD>
+                        <TH WIDTH=10%><FONT SIZE=2>Autor :</FONT></TH>
+                        <TD WIDTH=10%><INPUT TYPE=TEXT NAME="aut" SIZE=20></TD>
+                        <TD WIDTH=40%><SELECT NAME="OLaut" SIZE=1>
+                                <OPTION VALUE="and">Y
+                                <OPTION VALUE="or">O
+                                </SELECT></TD>
+                </TR>
+
+                <TR VALIGN=CENTER>
+                        <TD ALIGN=RIGHT><BR></TD>
+                        <TH><FONT SIZE=2>Título :</FONT></TH>
+                        <TD><INPUT TYPE=TEXT NAME="tit" SIZE=20></TD>
+                        <TD><SELECT NAME="OLtit" SIZE=1>
+                                <OPTION VALUE="and">Y
+                                <OPTION VALUE="or">O
+                                </SELECT>
+                        </TD>
+                </TR>
+
+                <TR VALIGN=CENTER>
+                        <TD ALIGN=RIGHT><BR></TD>
+                        <TH><FONT SIZE=2>Tema :</FONT></TH>
+                        <TD><INPUT TYPE=TEXT NAME="des" SIZE=20></TD>
+                        <TD><BR></TD>
+                </TR>
+
+                <TR VALIGN=BOTTOM>
+                        <TD><BR></TD>
+                        <TD><INPUT TYPE=SUBMIT VALUE="Buscar"></TD>
+                        <TD><BR></TD>
+                        <TD><BR></TD>
+                </TR>
+
+</TABLE>
+
+<? }
+
+function tablaNtermino() { ?>
+
+        <TABLE WIDTH="100%" BORDER="0" CELLPADDING=4 CELLSPACING=0>
+                <COL WIDTH=135*>
+                <COL WIDTH=121*>
+                <THEAD>
+			<TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33 COLSPAN=2>
+                                        <P ALIGN=CENTER><B><FONT SIZE=2 FACE="Nimbus Sans L">Si no tiene carné digite
+                                        "INVITADO"</FONT></B>
+                                </TD>
+                        </TR>
+
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33>
+                                        <P ALIGN=RIGHT><B><FONT SIZE=2 FACE="Nimbus Sans L">CARNÉ</FONT></B>
+                                        </P>
+                                </TD>
+                                <TD WIDTH=47% HEIGHT=33>
+                                        <DIV ALIGN=LEFT>
+                                                <INPUT TYPE=TEXT NAME="carne" SIZE=20>
+                                        </DIV>
+                                </TD>
+                        </TR>
+
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33>
+                                        <P ALIGN=RIGHT><B><FONT SIZE=2 FACE="Nimbus Sans L">INGRESE EL TÉRMINO A BUSCAR:</FONT></B>
+                                        </P>
+                                </TD>
+                                <TD WIDTH=47%>
+                                        <DIV ALIGN=LEFT>
+                                                <P><INPUT TYPE=TEXT NAME="ter" SIZE=20>
+                                                </P>
+                                        </DIV>
+                                </TD>
+                        </TR>
+                </THEAD>
+                <TBODY>
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33>
+                                        <DIV ALIGN=RIGHT>
+                                                <P><INPUT TYPE=SUBMIT VALUE="Mostrar"></P>
+                                        </DIV>
+                                </TD>
+                                <TD WIDTH=47%>
+                                        <P><BR>
+                                        </P>
+                                </TD>
+                        </TR>
+                </TBODY>
+        </TABLE>
+
+
+<? }
+
+function tablaNtitulo() { ?>
+
+        <TABLE WIDTH=100% BORDER=0 CELLPADDING=4 CELLSPACING=0>
+                <COL WIDTH=134*>
+                <COL WIDTH=122*>
+                <THEAD>
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33 COLSPAN=2>
+                                        <P ALIGN=CENTER><B><FONT SIZE=2 FACE="Nimbus Sans L">Si no tiene carné digite 
+					"INVITADO"</FONT></B>
+                                </TD>
+                        </TR>
+
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53% HEIGHT=33>
+                                        <P ALIGN=RIGHT><B><FONT SIZE=2 FACE="Nimbus Sans L">CARNÉ</FONT></B>
+                                        </P>
+                                </TD>
+                                <TD WIDTH=47% HEIGHT=33>
+                                        <DIV ALIGN=LEFT>
+                                                <INPUT TYPE=TEXT NAME="carne" SIZE=20>
+                                        </DIV>
+                                </TD>
+                        </TR>
+                        <TR VALIGN=BOTTOM>
+                                <TD WIDTH=53%>
+                                        <P ALIGN=RIGHT><B><FONT SIZE=2><FONT FACE="Nimbus Sans L">TÍTULO DEL LIBRO</FONT></FONT></B>
+                                        </P>
+                                </TD>
+                                <TD WIDTH=47% HEIGHT=33>
+                                        <DIV ALIGN=LEFT>
+                                                <INPUT TYPE=TEXT NAME="nom" SIZE=20>
+                                        </DIV>
+                                </TD>
+                        </TR>
+                </THEAD>
+                <TBODY>
+                        <TR VALIGN=TOP>
+                                <TD WIDTH=52%>
+                                        <DIV ALIGN=RIGHT>
+                                                <P><INPUT TYPE=SUBMIT VALUE="Buscar"></P>
+                                        </DIV>
+                                </TD>
+                                <TD WIDTH=48%>
+                                        <P><BR>
+                                        </P>
+                                </TD>
+                        </TR>
+                </TBODY>
+        </TABLE>
+
+<? } 
+
+function mensajeVacio() { ?>
+
+<SCRIPT LANGUAJE="JavaScript">alert("No Ingresó ningún valor para completar la operación")</SCRIPT>
+<SCRIPT LANGUAJE="JavaScript">history.go(-1)</SCRIPT>
+
+<? } 
+
+function mensajeCarneVacio() { ?>
+
+<SCRIPT LANGUAJE="JavaScript">alert("DEBE INGRESAR EL NRO DE CARNÉ ANTES DE REALIZAR SU 
+CONSULTA")</SCRIPT>
+<SCRIPT LANGUAJE="JavaScript">history.go(-1)</SCRIPT>
+
+<? } 
+
+function mensajeCarneInvalido() { ?>
+
+<SCRIPT LANGUAJE="JavaScript">alert("SU NRO DE CARNÉ ES INVALIDO")</SCRIPT>
+<SCRIPT LANGUAJE="JavaScript">history.go(-1)</SCRIPT>
+
+<? } 
+
+function mensajeUsuarioInvalido() { ?>
+
+<SCRIPT LANGUAJE="JavaScript">alert("NO ES UN USUARIO REGISTRADO")</SCRIPT>
+<SCRIPT LANGUAJE="JavaScript">history.go(-1)</SCRIPT>
+
+<? } ?>
